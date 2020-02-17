@@ -76,7 +76,7 @@ module.exports.fromURL = function (url, path, options, callback) {
 
   var n = Nightmare({
     switches: { 'ignore-certificate-errors': true, 'force-device-scale-factor': options.scale ? options.scale.toString() : '1' },
-    show: typeof options.show === 'boolean' ? options.show : true,
+    show: typeof options.show === 'boolean' ? options.show : false,
     width: options.width || 1280,
     height: options.height || 720
   });
@@ -148,7 +148,7 @@ module.exports.fromHTML = function (html, path, options, callback) {
 
     var n = Nightmare({
         switches: { 'force-device-scale-factor': options.scale ? options.scale.toString() : '1' },
-        show: typeof options.show === 'boolean' ? options.show : true,
+        show: typeof options.show === 'boolean' ? options.show : false,
         width: options.width || 1280,
         height: options.height || 720
     });
